@@ -1,0 +1,4 @@
+#homePage{
+    -fx-background-image: url("assests/img.png");
+    -fx-background-repeat: stretch;
+}

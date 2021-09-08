@@ -10,8 +10,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("ui/main.fxml"));
         Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("Styles/style.css").toExternalForm());
         stage.setTitle("Online Food Delivery App");
         stage.setScene(scene);
         stage.show();

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="homePage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" fx:controller="sample.MainController" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField layoutX="183.0" layoutY="177.0" prefHeight="42.0" prefWidth="289.0" style="-fx-background-radius: 0 0 10 10;" />
+      <TextField layoutX="183.0" layoutY="123.0" prefHeight="42.0" prefWidth="289.0" style="-fx-background-radius: 10 10 0 0;" />
+      <Label layoutX="85.0" layoutY="131.0" text="Username" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="185.0" text="Password" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="245.0" layoutY="232.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="115.0" style="-fx-background-radius: 20 20 20 20;" text="Login">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="294.0" layoutY="290.0" text="OR" textFill="WHITE" />
+      <Button layoutX="245.0" layoutY="321.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="115.0" style="-fx-background-radius: 20 20 20 20;" text="Signup">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="248.0" layoutY="60.0" text="Hi, there" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Century Gothic" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
