@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="homePage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" fx:controller="sample.MainController" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="homePage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.MainController">
    <children>
       <TextField layoutX="183.0" layoutY="177.0" prefHeight="42.0" prefWidth="289.0" style="-fx-background-radius: 0 0 10 10;" />
       <TextField layoutX="183.0" layoutY="123.0" prefHeight="42.0" prefWidth="289.0" style="-fx-background-radius: 10 10 0 0;" />
@@ -26,7 +26,7 @@
          </font>
       </Button>
       <Label layoutX="294.0" layoutY="290.0" text="OR" textFill="WHITE" />
-      <Button layoutX="245.0" layoutY="321.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="115.0" style="-fx-background-radius: 20 20 20 20;" text="Signup">
+      <Button layoutX="245.0" layoutY="321.0" mnemonicParsing="false" onAction="#signup" prefHeight="38.0" prefWidth="115.0" style="-fx-background-radius: 20 20 20 20;" text="Signup">
          <font>
             <Font name="Century" size="20.0" />
          </font>
