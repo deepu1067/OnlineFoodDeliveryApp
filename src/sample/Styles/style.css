@@ -2,3 +2,8 @@
     -fx-background-image: url("assests/img.png");
     -fx-background-repeat: stretch;
 }
+
+.bodybg{
+    -fx-background-image: url("assests/img.png");
+    -fx-background-repeat: stretch;
+}

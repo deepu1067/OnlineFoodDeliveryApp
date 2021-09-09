@@ -17,7 +17,7 @@ public class MainController {
 
     @FXML
     void signup(ActionEvent event) throws IOException {
-        parent = FXMLLoader.load(getClass().getResource("sample/ui/signup.fxml"));
+        parent = FXMLLoader.load(getClass().getResource("../ui/signup.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(parent);
         stage.setScene(scene);
