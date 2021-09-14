@@ -75,4 +75,22 @@ public class Signup {
 
         }
     }
+
+    @FXML
+    public void nextButton2(MouseEvent mouseEvent){
+
+    }
+
+    @FXML
+    public void backButton2(MouseEvent mouseEvent) {
+        try {
+            parent = FXMLLoader.load(getClass().getResource("../ui/signup.fxml"));
+            scene = new Scene(parent);
+            stage = (Stage) ((Node)mouseEvent.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
