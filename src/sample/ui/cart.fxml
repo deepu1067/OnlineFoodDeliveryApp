@@ -63,7 +63,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <RadioButton layoutX="436.0" layoutY="199.0" mnemonicParsing="false">
+      <RadioButton fx:id="redButton" layoutX="436.0" layoutY="199.0" mnemonicParsing="false" onAction="#cutRedBtn">
          <font>
             <Font size="13.0" />
          </font>
