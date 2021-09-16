@@ -1,11 +1,14 @@
 package sample.extraClasses;
 
-public class User{
+import java.io.Serializable;
+
+public class User implements Serializable {
     public String fName;
     public String lName;
     public String email;
     public String username;
     public String pass;
-    public CreditCard cc;
     public String address;
+    public String ccNum;
+    public String validity;
 }

@@ -4,61 +4,61 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="bodybg" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.Signup">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="bodybg" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.Signup">
    <children>
-      <TextField fx:id="fName" layoutX="262.0" layoutY="72.0" prefHeight="34.0" prefWidth="247.0" />
-      <Label layoutX="123.0" layoutY="78.0" text="First Name" textFill="WHITE">
+      <TextField fx:id="fName" layoutX="272.0" layoutY="82.0" prefHeight="34.0" prefWidth="247.0" />
+      <Label layoutX="133.0" layoutY="88.0" text="First Name" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="122.0" layoutY="125.0" text="Last Name" textFill="WHITE">
+      <Label layoutX="132.0" layoutY="135.0" text="Last Name" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="lName" layoutX="261.0" layoutY="118.0" prefHeight="34.0" prefWidth="247.0" />
-      <ImageView fx:id="backButton" fitHeight="34.0" fitWidth="40.0" layoutX="14.0" layoutY="17.0" onMouseClicked="#backButton" pickOnBounds="true" preserveRatio="true">
+      <TextField fx:id="lName" layoutX="271.0" layoutY="128.0" prefHeight="34.0" prefWidth="247.0" />
+      <ImageView fx:id="backButton" fitHeight="34.0" fitWidth="40.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#backButton" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Styles/assests/back.png" />
          </image>
       </ImageView>
-      <Label layoutX="123.0" layoutY="170.0" text="Email" textFill="WHITE">
+      <Label layoutX="133.0" layoutY="180.0" text="Email" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="123.0" layoutY="216.0" text="Username" textFill="WHITE">
+      <Label layoutX="133.0" layoutY="226.0" text="Username" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="email" layoutX="261.0" layoutY="163.0" prefHeight="34.0" prefWidth="247.0" />
-      <TextField fx:id="username" layoutX="261.0" layoutY="210.0" prefHeight="34.0" prefWidth="247.0" />
-      <Label layoutX="123.0" layoutY="260.0" text="Password" textFill="WHITE">
+      <TextField fx:id="email" layoutX="271.0" layoutY="173.0" prefHeight="34.0" prefWidth="247.0" />
+      <TextField fx:id="username" layoutX="271.0" layoutY="220.0" prefHeight="34.0" prefWidth="247.0" />
+      <Label layoutX="133.0" layoutY="270.0" text="Password" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="pass" layoutX="261.0" layoutY="256.0" prefHeight="34.0" prefWidth="247.0" />
-      <Label layoutX="123.0" layoutY="307.0" text="Confirm Password" textFill="WHITE">
+      <TextField fx:id="pass" layoutX="271.0" layoutY="266.0" prefHeight="34.0" prefWidth="247.0" />
+      <Label layoutX="133.0" layoutY="317.0" text="Confirm Password" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="confirmPass" layoutX="261.0" layoutY="303.0" prefHeight="34.0" prefWidth="247.0" />
+      <TextField fx:id="confirmPass" layoutX="271.0" layoutY="313.0" prefHeight="34.0" prefWidth="247.0" />
       <ImageView fitHeight="34.0" fitWidth="40.0" layoutX="552.0" layoutY="352.0" onMouseClicked="#nextButton1" pickOnBounds="true" preserveRatio="true" rotate="180.0">
          <image>
             <Image url="@../Styles/assests/back.png" />
          </image>
       </ImageView>
-      <Label fx:id="errorMessage" layoutX="112.0" layoutY="32.0" textFill="RED">
+      <Label fx:id="errorMessage" layoutX="122.0" layoutY="42.0" textFill="RED">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
    </children>
-</AnchorPane>
+</Pane>
