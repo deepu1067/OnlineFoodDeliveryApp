@@ -1,5 +1,60 @@
 package sample.server;
 
-public class ClientHandler extends Thread{
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.net.Socket;
 
+public class ClientHandler extends Thread{
+    Socket client;
+    BufferedReader reader;
+    BufferedWriter writer;
+
+    public ClientHandler(Socket client, BufferedReader reader, BufferedWriter writer) {
+        this.client = client;
+        this.reader = reader;
+        this.writer = writer;
+    }
+
+    @Override
+    public void run() {
+        while (true){
+            try {
+                String str = reader.readLine();
+
+                if (str.equals("initializeHomePage")) {
+                    writer.write(foodList() + "\n");
+                    writer.flush();
+                }
+                else{
+                    writer.write("nothing returned\n");
+                    writer.flush();
+                }
+            }
+            catch (Exception e){
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
+    private String foodList(){
+        String foods = "";
+
+        try{
+            FileReader file = new FileReader("src/sample/server/food.txt");
+            BufferedReader reader = new BufferedReader(file);
+
+            String line;
+            while((line=reader.readLine()) != null){
+                foods = foods + line + "###";
+            }
+
+            reader.close();
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+        return foods;
+    }
 }

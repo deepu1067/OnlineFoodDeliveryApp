@@ -48,7 +48,7 @@ public class HomeController {
             writer.flush();
 
             String fString = reader.readLine();
-
+            System.out.println(fString);
             String [] parts1 = fString.split("###");
             for (String value : parts1) {
                 String[] s = value.split("#");
