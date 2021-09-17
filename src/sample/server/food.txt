@@ -1,0 +1,6 @@
+1#Cheese Burger#true#350#K.F.C
+2#Biryani#true#250#Kismot Biryani & Restaurant
+3#Pasta#true#170#Rastaa Pasta
+4#Chicken Burger#true#250#Food court
+5#Kabab#true#190#Kabab Ghor
+6#Bashmoti Kacchi#true#270#Kacchi vai

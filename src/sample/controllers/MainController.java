@@ -52,8 +52,10 @@ public class MainController {
             if(mPass.equals(p)) {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("../ui/home.fxml"));
                 parent = loader.load();
+
                 HomeController home = loader.getController();
                 home.setUser(u);
+
                 scene = new Scene(parent);
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 stage.setScene(scene);
