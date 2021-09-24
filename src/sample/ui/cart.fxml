@@ -81,12 +81,12 @@
       </Label>
       <Label layoutX="401.0" layoutY="303.0" text="Tk" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="20.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <Label fx:id="finalPrice" layoutX="433.0" layoutY="303.0" text="00.0" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="20.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <Button fx:id="paymentButton" layoutX="164.0" layoutY="342.0" mnemonicParsing="false" onAction="#paymentButton" prefHeight="44.0" prefWidth="272.0" text="Review Payment and Address" textAlignment="CENTER">

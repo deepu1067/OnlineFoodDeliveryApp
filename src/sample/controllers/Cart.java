@@ -8,7 +8,25 @@ import javafx.scene.control.RadioButton;
 public class Cart {
 
     @FXML
+    public Label restName;
+
+    @FXML
+    public Label quantity;
+
+    @FXML
+    public Label foodItem;
+
+    @FXML
+    public Label foodPrice1;
+
+    @FXML
+    public Label foodPrice2;
+
+    @FXML
     public Label cutMsg;
+
+    @FXML
+    public Label finalPrice;
 
     @FXML
     public RadioButton redButton;
