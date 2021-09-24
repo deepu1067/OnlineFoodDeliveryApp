@@ -28,10 +28,14 @@ Comments
 *
     fx:id
     Restaurants name = resName
-    Subtotal Price = foodPrice
+    Food Item price = foodPrice1
+    Subtotal Price = foodPrice2
     Delivery Fee = delFee
     Cutlery message = cutMsg
     Total = finalPrice
+    Food Item = foodItem
+    Quant. = quantity
+
 
 *
 */
