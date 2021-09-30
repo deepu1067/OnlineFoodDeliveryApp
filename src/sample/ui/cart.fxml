@@ -4,115 +4,105 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="bodybg" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.Cart">
    <children>
-      <Label layoutX="117.0" layoutY="24.0" text="Cart" textAlignment="CENTER" textFill="#fffdfd">
+      <Label layoutX="55.0" layoutY="28.0" text="Cart" textAlignment="CENTER" textFill="#fffdfd">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <Label fx:id="restName" layoutX="117.0" layoutY="50.0" text="Restaurant name" textFill="WHITE">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="352.0" layoutY="30.0" text="Estimated delivary" textFill="WHITE">
+      <Label layoutX="456.0" layoutY="26.0" text="Estimated delivary" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="358.0" layoutY="50.0" text="ASAP (30-40 min)" textFill="WHITE">
+      <Label layoutX="462.0" layoutY="46.0" text="ASAP (30-40 min)" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="117.0" layoutY="187.0" text="Subtotal" textFill="WHITE">
+      <Label layoutX="117.0" layoutY="142.0" text="Subtotal" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="400.0" layoutY="186.0" text="Tk " textFill="WHITE">
+      <Label layoutX="400.0" layoutY="141.0" text="Tk " textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="foodPrice2" layoutX="433.0" layoutY="186.0" text="00.0" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="foodPrice" layoutX="433.0" layoutY="141.0" text="00.0" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="117.0" layoutY="214.0" text="Delivery fee" textFill="WHITE">
+      <Label layoutX="117.0" layoutY="178.0" text="Delivery fee" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="404.0" layoutY="214.0" text="Tk " textFill="WHITE">
+      <Label layoutX="405.0" layoutY="178.0" text="Tk " textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="delFee" layoutX="445.0" layoutY="214.0" text="40" textFill="WHITE">
+      <Label fx:id="delFee" layoutX="443.0" layoutY="178.0" text="40" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="117.0" layoutY="243.0" text="Cutlery" textFill="WHITE">
+      <Label layoutX="117.0" layoutY="207.0" text="Cutlery" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <RadioButton fx:id="redButton" layoutX="429.0" layoutY="248.0" mnemonicParsing="false" onAction="#cutRedBtn">
+      <RadioButton fx:id="redButton" layoutX="429.0" layoutY="212.0" mnemonicParsing="false" onAction="#cutRedBtn">
          <font>
             <Font size="11.0" />
          </font>
       </RadioButton>
-      <Label fx:id="cutMsg" layoutX="117.0" layoutY="270.0" text="Cutlery won't be provided. Thanks for helping to keep environment green." textFill="WHITE" />
-      <Label layoutX="117.0" layoutY="303.0" text="Total" textFill="WHITE">
+      <Label fx:id="cutMsg" layoutX="117.0" layoutY="234.0" text="Cutlery won't be provided. Thanks for helping to keep environment green." textFill="WHITE" />
+      <Label layoutX="117.0" layoutY="273.0" text="Total" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="166.0" layoutY="310.0" text="(incl. VAT)" textFill="WHITE">
+      <Label layoutX="166.0" layoutY="280.0" text="(incl. VAT)" textFill="WHITE">
          <font>
             <Font size="11.0" />
          </font>
       </Label>
-      <Label layoutX="401.0" layoutY="303.0" text="Tk" textFill="WHITE">
+      <Label layoutX="401.0" layoutY="273.0" text="Tk" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="finalPrice" layoutX="433.0" layoutY="303.0" text="00.0" textFill="WHITE">
+      <Label fx:id="finalPrice" layoutX="433.0" layoutY="273.0" text="00.0" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="paymentButton" layoutX="164.0" layoutY="342.0" mnemonicParsing="false" onAction="#paymentButton" prefHeight="44.0" prefWidth="272.0" text="Review Payment and Address" textAlignment="CENTER">
+      <Button fx:id="paymentButton" layoutX="164.0" layoutY="340.0" mnemonicParsing="false" onAction="#paymentButton" prefHeight="44.0" prefWidth="272.0" text="Review Payment and Address" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Label fx:id="foodItem" layoutX="190.0" layoutY="114.0" text="Food Item" textFill="WHITE">
+      <Line endX="219.0" endY="11.800003051757812" layoutX="181.0" layoutY="142.0" startX="3.79998779296875" startY="11.800003051757812" stroke="WHITE" />
+      <Line endX="100.0" layoutX="300.0" layoutY="188.0" startX="-100.0" stroke="WHITE" />
+      <Label fx:id="userName" layoutX="258.0" layoutY="63.0" text="Hi, user" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="quantity" layoutX="119.0" layoutY="116.0" text="Quant." textFill="WHITE">
+      <Label layoutX="230.0" layoutY="90.0" text="Check your bill please" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="401.0" layoutY="114.0" text="Tk " textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </Label>
-      <Label fx:id="foodPrice1" layoutX="434.0" layoutY="114.0" text="00.0" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff35" height="70.0" layoutX="440.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="151.0" />
    </children>
 </AnchorPane>

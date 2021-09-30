@@ -54,7 +54,7 @@ public class MainController {
                 parent = loader.load();
 
                 HomeController home = loader.getController();
-                home.setUser(u);
+                home.initialize(u);
 
                 scene = new Scene(parent);
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

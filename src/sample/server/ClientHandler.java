@@ -26,7 +26,10 @@ public class ClientHandler extends Thread{
                     writer.write(foodList() + "\n");
                     writer.flush();
                 }
+                else if(str.contains("priceList")){
+                    String [] ids = reader.readLine().split(",");
 
+                }
                 else{
                     System.out.println("[Client] " + str);
                 }

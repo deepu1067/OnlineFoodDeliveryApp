@@ -4,13 +4,12 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="bodybg" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.HomeController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="600.0" styleClass="bodybg" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.HomeController">
    <children>
-      <TableView fx:id="table" layoutX="37.0" layoutY="64.0" prefHeight="200.0" prefWidth="535.0">
+      <TableView fx:id="table" layoutX="37.0" layoutY="47.0" prefHeight="176.0" prefWidth="535.0">
         <columns>
           <TableColumn fx:id="id" editable="false" prefWidth="53.5999755859375" text="ID" />
           <TableColumn fx:id="name" editable="false" prefWidth="153.5999755859375" text="Name" />
@@ -19,19 +18,39 @@
             <TableColumn fx:id="restaurant" editable="false" prefWidth="176.0" text="Restaurants" />
         </columns>
       </TableView>
-      <TextField fx:id="enterProduct" layoutX="37.0" layoutY="314.0" prefHeight="44.0" prefWidth="422.0" promptText="Enter the ids of the foods you want to buy">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font></TextField>
       <Label fx:id="userLabel" layoutX="37.0" layoutY="39.0" textFill="WHITE">
          <font>
             <Font name="Bell MT Bold" size="15.0" />
          </font>
       </Label>
-      <Button fx:id="goToCart" layoutX="492.0" layoutY="314.0" mnemonicParsing="false" onAction="#cart" prefHeight="44.0" prefWidth="80.0" style="-fx-background-color: #423f3f;" text="Add to cart" textFill="WHITE">
+      <Button fx:id="goToCart" layoutX="418.0" layoutY="403.0" mnemonicParsing="false" onAction="#cart" prefHeight="27.0" prefWidth="80.0" style="-fx-background-color: #423f3f;" text="Next" textFill="WHITE">
          <font>
             <Font name="Berlin Sans FB" size="13.0" />
          </font></Button>
-      <Label layoutX="37.0" layoutY="297.0" text="Use commas to separate the ids" textFill="WHITE" />
+      <Label layoutX="214.0" layoutY="14.0" text="Hi. Check our the food list" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="280.0" layoutY="228.0" mnemonicParsing="false" onAction="#addId" prefHeight="21.0" prefWidth="48.0" style="-fx-background-color: #d8f2e0;" text="Add">
+         <font>
+            <Font name="Bell MT Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="114.0" layoutY="403.0" mnemonicParsing="false" onAction="#deleteItem" style="-fx-background-color: #d8f2e0;" text="Delete Item">
+         <font>
+            <Font name="Bell MT Bold" size="13.0" />
+         </font>
+      </Button>
+      <TableView fx:id="addTable" layoutX="156.0" layoutY="256.0" prefHeight="136.0" prefWidth="302.0">
+        <columns>
+            <TableColumn fx:id="aId" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="aName" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="aPrice" prefWidth="75.0" text="Price" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
    </children>
 </Pane>

@@ -13,32 +13,18 @@ public class Cart {
     private BufferedReader reader;
 
     @FXML
-    public Label restName;
+    public Label userName;
 
     @FXML
-    public Label quantity;
-
-    @FXML
-    public Label foodItem;
-
-    @FXML
-    public Label foodPrice1;
-
-    @FXML
-    public Label foodPrice2;
-
-    @FXML
-    public Label cutMsg;
-
-    @FXML
-    public Label finalPrice;
+    public Label foodPrice, cutMsg, finalPrice;
 
     @FXML
     public RadioButton redButton;
 
     @FXML
-    public void initialize(Socket socket){
+    public void initialize(Socket socket, String name){
         Socket client = socket;
+        userName.setText("Hi, "+name);
         try {
             writer = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
             reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
@@ -60,11 +46,10 @@ public class Cart {
         if(redButton.isSelected()){
             cutMsg.setText("Cutlery will be provided by the restaurant, if it is available.");
         }
+        else{
+            cutMsg.setText("Cutlery will not be provided by the restaurant");
+        }
     }
-
-//    public void setSocket(Socket socket){
-//        this.socket = socket;
-//    }
 }
 /*
 Comments
