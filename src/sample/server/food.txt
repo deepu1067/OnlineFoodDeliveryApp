@@ -4,3 +4,9 @@
 4#Chicken Burger#true#250#Food court
 5#Kabab#true#190#Kabab Ghor
 6#Bashmoti Kacchi#true#270#Kacchi vai
+7#Maxican sub#true#120#Wake up
+8#Morog polao#true#250#Kismot Biryani & Restaurant
+9#Fried Rice set#true#300#Shopno
+10#Chicken Burger#true#250#Food court
+11#Kabab#true#190#Kabab Ghor
+12#Bashmoti Kacchi#true#270#Kacchi vai

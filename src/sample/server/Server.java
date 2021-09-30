@@ -9,11 +9,12 @@ public class Server {
         System.out.println("[Server] Waiting for clients");
         ServerSocket serverSocket = new ServerSocket(6000);
         serverSocket.setReuseAddress(true);
-
+        int count = 0;
         while (true) {
             try {
                 Socket socket = serverSocket.accept();
-                System.out.println("Connection established");
+                count++;
+                System.out.println("Client no-" + count + " connected");
 
                 OutputStreamWriter o = new OutputStreamWriter(socket.getOutputStream());
                 BufferedWriter writer = new BufferedWriter(o);

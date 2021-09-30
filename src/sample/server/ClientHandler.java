@@ -26,9 +26,9 @@ public class ClientHandler extends Thread{
                     writer.write(foodList() + "\n");
                     writer.flush();
                 }
+
                 else{
-                    writer.write("nothing returned\n");
-                    writer.flush();
+                    System.out.println("[Client] " + str);
                 }
             }
             catch (Exception e){

@@ -5,7 +5,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 
+import java.io.*;
+import java.net.Socket;
+
 public class Cart {
+    private BufferedWriter writer;
+    private BufferedReader reader;
 
     @FXML
     public Label cutMsg;
@@ -13,8 +18,25 @@ public class Cart {
     @FXML
     public RadioButton redButton;
 
+    @FXML
+    public void initialize(Socket socket){
+        Socket client = socket;
+        System.out.println(client);
+        try {
+            writer = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
+            reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void paymentButton(ActionEvent actionEvent) {
+        try {
+            writer.write("okay\n");
+            writer.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void cutRedBtn(ActionEvent actionEvent) {
@@ -22,6 +44,10 @@ public class Cart {
             cutMsg.setText("Cutlery will be provided by the restaurant, if it is available.");
         }
     }
+
+//    public void setSocket(Socket socket){
+//        this.socket = socket;
+//    }
 }
 /*
 Comments
