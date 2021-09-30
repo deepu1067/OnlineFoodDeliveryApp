@@ -13,7 +13,25 @@ public class Cart {
     private BufferedReader reader;
 
     @FXML
+    public Label restName;
+
+    @FXML
+    public Label quantity;
+
+    @FXML
+    public Label foodItem;
+
+    @FXML
+    public Label foodPrice1;
+
+    @FXML
+    public Label foodPrice2;
+
+    @FXML
     public Label cutMsg;
+
+    @FXML
+    public Label finalPrice;
 
     @FXML
     public RadioButton redButton;
@@ -21,7 +39,6 @@ public class Cart {
     @FXML
     public void initialize(Socket socket){
         Socket client = socket;
-        System.out.println(client);
         try {
             writer = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
             reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
@@ -54,10 +71,14 @@ Comments
 *
     fx:id
     Restaurants name = resName
-    Subtotal Price = foodPrice
+    Food Item price = foodPrice1
+    Subtotal Price = foodPrice2
     Delivery Fee = delFee
     Cutlery message = cutMsg
     Total = finalPrice
+    Food Item = foodItem
+    Quant. = quantity
+
 
 *
 */
