@@ -45,12 +45,12 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="405.0" layoutY="178.0" text="Tk " textFill="WHITE">
+      <Label layoutX="413.0" layoutY="178.0" text="Tk " textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="delFee" layoutX="443.0" layoutY="178.0" text="40" textFill="WHITE">
+      <Label fx:id="delFee" layoutX="448.0" layoutY="178.0" text="40" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
@@ -76,23 +76,22 @@
             <Font size="11.0" />
          </font>
       </Label>
-      <Label layoutX="401.0" layoutY="273.0" text="Tk" textFill="WHITE">
+      <Label layoutX="401.0" layoutY="275.0" text="Tk" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="finalPrice" layoutX="433.0" layoutY="273.0" text="00.0" textFill="WHITE">
+      <Label fx:id="finalPrice" layoutX="430.0" layoutY="273.0" text="00.0" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="paymentButton" layoutX="164.0" layoutY="340.0" mnemonicParsing="false" onAction="#paymentButton" prefHeight="44.0" prefWidth="272.0" text="Review Payment and Address" textAlignment="CENTER">
+      <Button fx:id="paymentButton" layoutX="164.0" layoutY="335.0" mnemonicParsing="false" onAction="#paymentButton" prefHeight="36.0" prefWidth="272.0" text="Review Payment and Address" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Line endX="219.0" endY="11.800003051757812" layoutX="181.0" layoutY="142.0" startX="3.79998779296875" startY="11.800003051757812" stroke="WHITE" />
-      <Line endX="100.0" layoutX="300.0" layoutY="188.0" startX="-100.0" stroke="WHITE" />
+      <Line endX="207.0" endY="11.79998779296875" layoutX="181.0" layoutY="142.0" startX="23.0" startY="11.79998779296875" stroke="WHITE" />
       <Label fx:id="userName" layoutX="258.0" layoutY="63.0" text="Hi, user" textFill="WHITE">
          <font>
             <Font size="18.0" />
@@ -104,5 +103,6 @@
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff35" height="70.0" layoutX="440.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="151.0" />
+      <Line endX="207.0" endY="11.79998779296875" layoutX="181.0" layoutY="176.0" startX="23.0" startY="11.79998779296875" stroke="WHITE" />
    </children>
 </AnchorPane>
