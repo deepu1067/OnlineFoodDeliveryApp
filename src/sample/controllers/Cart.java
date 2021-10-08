@@ -21,7 +21,17 @@ public class Cart {
     @FXML
     public RadioButton redButton;
 
-
+    @FXML
+    public void initialize(Socket socket, String name){
+        Socket client = socket;
+        userName.setText("Hi, "+name);
+        try {
+            writer = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
+            reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void paymentButton(ActionEvent actionEvent) {
         try {
