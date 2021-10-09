@@ -20,6 +20,11 @@ public class Checkout {
     public ChoiceBox<String> paymentMethod;
     public String[] methods = {"Cash", "Visa", "Mastercard"};
 
+    @FXML
+    void initialize(){
+        paymentMethod.getItems().addAll(methods);
+    }
+
 
     public void orderPlaceBtn(javafx.event.ActionEvent actionEvent) {
         try {
