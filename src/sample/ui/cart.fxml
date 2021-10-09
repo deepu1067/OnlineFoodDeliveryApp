@@ -45,12 +45,12 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="413.0" layoutY="178.0" text="Tk " textFill="WHITE">
+      <Label layoutX="402.0" layoutY="178.0" text="Tk " textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="delFee" layoutX="448.0" layoutY="178.0" text="40" textFill="WHITE">
+      <Label fx:id="delFee" layoutX="436.0" layoutY="178.0" text="40" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
