@@ -19,44 +19,42 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="address" layoutX="166.0" layoutY="120.0" prefHeight="26.0" prefWidth="434.0" text="Detailed address" textFill="WHITE">
+      <Label fx:id="address" layoutX="106.0" layoutY="120.0" text="Detailed address" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="103.0" layoutY="181.0" text="Payment method" textFill="WHITE">
+      <Label layoutX="103.0" layoutY="187.0" text="Payment method" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="102.0" layoutY="280.0" text="Total" textFill="WHITE">
+      <Label layoutX="102.0" layoutY="303.0" text="Total" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="151.0" layoutY="286.0" text="(incl. VAT)" textFill="WHITE">
+      <Label layoutX="151.0" layoutY="309.0" text="(incl. VAT)" textFill="WHITE">
          <font>
             <Font size="11.0" />
          </font>
       </Label>
-      <Line endX="207.0" endY="11.79998779296875" layoutX="202.0" layoutY="281.0" startX="13.0" startY="11.79998779296875" stroke="WHITE" />
-      <Label layoutX="435.0" layoutY="282.0" text="Tk" textFill="WHITE">
+      <Line endX="207.0" endY="11.79998779296875" layoutX="202.0" layoutY="304.0" startX="13.0" startY="11.79998779296875" stroke="WHITE" />
+      <Label layoutX="435.0" layoutY="305.0" text="Tk" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="finalPrice" layoutX="465.0" layoutY="282.0" text="00.0" textFill="WHITE">
+      <Label fx:id="finalPrice3" layoutX="465.0" layoutY="305.0" text="00.0" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="176.0" layoutY="344.0" mnemonicParsing="false" onAction="#orderPlaceBtn" prefHeight="36.0" prefWidth="272.0" text="Place order" textAlignment="CENTER">
+      <Button fx:id="orderPlaceBtn" layoutX="176.0" layoutY="350.0" mnemonicParsing="false" onAction="#orderPlaceBtn" prefHeight="36.0" prefWidth="272.0" text="Place order" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <ChoiceBox fx:id="paymentMethod" layoutX="295.0" layoutY="182.0" prefWidth="150.0" />
-      <Label fx:id="userName" layoutX="40.0" layoutY="146.0" />
-      <Label fx:id="fileName" layoutX="40.0" layoutY="240.0" />
+      <ChoiceBox fx:id="pymentMethod" layoutX="295.0" layoutY="188.0" prefWidth="150.0" />
    </children>
 </AnchorPane>

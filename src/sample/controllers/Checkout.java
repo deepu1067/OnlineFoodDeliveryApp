@@ -3,36 +3,22 @@ package sample.controllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
 
-
-import java.io.*;
-import java.net.Socket;
+import java.awt.event.ActionEvent;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.security.PrivateKey;
 
 public class Checkout {
-    private Socket client;
     private BufferedWriter writer;
     private BufferedReader reader;
+    @FXML
+    Button orderPlaceBtn;
 
     @FXML
-    Label finalPrice, userName, fileName;
-
-    @FXML
-    ChoiceBox<String> paymentMethod;
-
-    @FXML
-    void initialize(Socket sc, String user, String price) throws IOException {
-        client = sc;
-        userName.setText(user);
-        userName.setVisible(false);
-        finalPrice.setText(price);
-
-        writer = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
-        reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
-
-        String [] methods = {"Cash on delivery", "Visa", "Mastercard"};
-        paymentMethod.getItems().addAll(methods);
-    }
+    public ChoiceBox<String> paymentMethod;
+    public String[] methods = {"Cash", "Visa", "Mastercard"};
 
 
     public void orderPlaceBtn(javafx.event.ActionEvent actionEvent) {
@@ -42,10 +28,5 @@ public class Checkout {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    void setFileName(String file){
-        fileName.setText(file);
-        fileName.setVisible(false);
     }
 }
