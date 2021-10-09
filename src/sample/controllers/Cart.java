@@ -11,20 +11,28 @@ import java.net.Socket;
 public class Cart {
     private BufferedWriter writer;
     private BufferedReader reader;
+    private Socket client;
 
     @FXML
-    public Label userName;
+    public Label userName, fileName, userLabel;
 
     @FXML
-    public Label foodPrice, cutMsg, finalPrice;
+    public Label foodPrice, cutMsg, finalPrice, delFee;
 
     @FXML
     public RadioButton redButton;
 
     @FXML
-    public void initialize(Socket socket, String name){
-        Socket client = socket;
+    public void initialize(Socket socket, String name, String price){
+        client = socket;
+        userLabel.setText(name);
+        userLabel.setVisible(false);
         userName.setText("Hi, "+name);
+        foodPrice.setText(price);
+
+        int totalPrice = Integer.parseInt(price) + Integer.parseInt(delFee.getText());
+        finalPrice.setText(totalPrice+"");
+
         try {
             writer = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
             reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
@@ -35,7 +43,8 @@ public class Cart {
 
     public void paymentButton(ActionEvent actionEvent) {
         try {
-            writer.write("okay\n");
+            writer.write("File Name: "+fileName.getText() +
+                    "     FinalPrice: "+finalPrice.getText()+"\n");
             writer.flush();
         } catch (IOException e) {
             e.printStackTrace();
@@ -50,6 +59,10 @@ public class Cart {
             cutMsg.setText("Cutlery will not be provided by the restaurant");
         }
     }
+
+    void setFileName(String name){
+        fileName.setText(name);
+    }
 }
 /*
 Comments
@@ -63,8 +76,6 @@ Comments
     Total = finalPrice
     Food Item = foodItem
     Quant. = quantity
-
-
 *
 */
 

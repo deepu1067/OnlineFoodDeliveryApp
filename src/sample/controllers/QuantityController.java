@@ -2,6 +2,8 @@ package sample.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
@@ -23,6 +25,7 @@ public class QuantityController {
     private Parent parent;
     private Stage stage;
     private Scene scene;
+    private Socket client;
     int boxSize;
 
     @FXML
@@ -36,7 +39,7 @@ public class QuantityController {
 
     @FXML
     void initialize(Socket socket, String name, String id) throws IOException {
-        Socket client = socket;
+        client = socket;
         userName.setText(name);
         userName.setVisible(false);
         warning.setVisible(false);
@@ -59,7 +62,18 @@ public class QuantityController {
             warning.setVisible(true);
         }
         else{
-            String sPrice = price();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../ui/cart.fxml"));
+            parent = loader.load();
+
+            Cart q = loader.getController();
+            q.initialize(client, userName.getText(),price());
+
+            q.setFileName(fileName);
+
+            stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(parent);
+            stage.setScene(scene);
+            stage.show();
         }
     }
 

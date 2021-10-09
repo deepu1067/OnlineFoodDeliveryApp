@@ -92,7 +92,7 @@
          </font>
       </Button>
       <Line endX="207.0" endY="11.79998779296875" layoutX="181.0" layoutY="142.0" startX="23.0" startY="11.79998779296875" stroke="WHITE" />
-      <Label fx:id="userName" layoutX="258.0" layoutY="63.0" text="Hi, user" textFill="WHITE">
+      <Label fx:id="userName" alignment="CENTER" layoutY="63.0" prefHeight="27.0" prefWidth="600.0" text="Hi, user" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
@@ -104,5 +104,7 @@
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff35" height="70.0" layoutX="440.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="151.0" />
       <Line endX="207.0" endY="11.79998779296875" layoutX="181.0" layoutY="176.0" startX="23.0" startY="11.79998779296875" stroke="WHITE" />
+      <Label fx:id="fileName" layoutX="41.0" layoutY="91.0" visible="false" />
+      <Label fx:id="userLabel" layoutX="41.0" layoutY="83.0" />
    </children>
 </AnchorPane>
