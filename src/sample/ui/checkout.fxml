@@ -14,40 +14,40 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <Label layoutX="105.0" layoutY="86.0" text="Delivery address" textFill="WHITE">
+      <Label layoutX="79.0" layoutY="87.0" text="Delivery address" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="address" layoutX="106.0" layoutY="120.0" text="Detailed address" textFill="WHITE">
+      <Label fx:id="address" layoutX="80.0" layoutY="121.0" text="Detailed address" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="103.0" layoutY="187.0" text="Payment method" textFill="WHITE">
+      <Label layoutX="77.0" layoutY="188.0" text="Payment method : " textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="106.0" layoutY="255.0" text="Total Price" textFill="WHITE">
+      <Label layoutX="80.0" layoutY="256.0" text="Total Price" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="200.0" layoutY="263.0" text="(incl. VAT)" textFill="WHITE">
+      <Label layoutX="174.0" layoutY="264.0" text="(incl. VAT)" textFill="WHITE">
          <font>
             <Font size="11.0" />
          </font>
       </Label>
-      <Line endX="213.0" endY="11.79998779296875" layoutX="203.0" layoutY="257.0" startX="61.0" startY="11.79998779296875" stroke="WHITE" />
-      <Label layoutX="436.0" layoutY="256.0" text="Tk" textFill="WHITE">
+      <Line endX="213.0" endY="11.79998779296875" layoutX="240.0" layoutY="257.0" startX="8.0" startY="11.79998779296875" stroke="WHITE" />
+      <Label layoutX="473.0" layoutY="256.0" text="Tk" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="finalPrice3" layoutX="466.0" layoutY="256.0" text="00.0" textFill="WHITE">
+      <Label fx:id="finalPrice" layoutX="503.0" layoutY="256.0" text="00.0" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <Button fx:id="orderPlaceBtn" layoutX="177.0" layoutY="329.0" mnemonicParsing="false" onAction="#orderPlaceBtn" prefHeight="36.0" prefWidth="272.0" text="Place order" textAlignment="CENTER">
@@ -55,6 +55,11 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <ChoiceBox fx:id="pymentMethod" layoutX="264.0" layoutY="188.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="pymentMethod" layoutX="389.0" layoutY="189.0" prefWidth="150.0" />
+      <Label fx:id="methodName" layoutX="248.0" layoutY="189.0" text="Select" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
