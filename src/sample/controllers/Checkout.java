@@ -34,13 +34,10 @@ public class Checkout {
         paymentMethod.getItems().addAll(methods);
     }
 
-
     public void orderPlaceBtn(javafx.event.ActionEvent actionEvent) {
-        try {
-            writer.write("Your order has been placed. Thank you!\n");
-            writer.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
+        String method = paymentMethod.getSelectionModel().getSelectedItem();
+        if(method != null){
+            System.out.println(method);
         }
     }
 
