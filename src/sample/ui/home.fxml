@@ -23,7 +23,7 @@
             <Font name="Bell MT Bold" size="15.0" />
          </font>
       </Label>
-      <Button fx:id="goToCart" layoutX="418.0" layoutY="403.0" mnemonicParsing="false" onAction="#cart" prefHeight="27.0" prefWidth="80.0" style="-fx-background-color: #423f3f;" text="Next" textFill="WHITE">
+      <Button layoutX="418.0" layoutY="403.0" mnemonicParsing="false" onAction="#next" prefHeight="27.0" prefWidth="80.0" style="-fx-background-color: #423f3f;" text="Next" textFill="WHITE">
          <font>
             <Font name="Berlin Sans FB" size="13.0" />
          </font></Button>

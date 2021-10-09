@@ -89,19 +89,6 @@ public class HomeController {
         table.setItems(foods);
     }
 
-
-    @FXML
-    void cart(ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ui/quantity.fxml"));
-        parent = loader.load();
-        QuantityController c = loader.getController();
-        c.initialize(client, userLabel.getText(), enterProduct.getText());
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(parent);
-        stage.setScene(scene);
-        stage.show();
-    }
-
     @FXML
     private TableView<Food> addTable;
 
@@ -131,5 +118,25 @@ public class HomeController {
     void deleteItem(){
         Food selectedItem = addTable.getSelectionModel().getSelectedItem();
         addTable.getItems().remove(selectedItem);
+    }
+
+    @FXML
+    void next(ActionEvent event) throws IOException{
+        String ids="";
+
+        for(Food f: addedItem){
+            ids += f.getId()+"##";
+        }
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ui/quantity.fxml"));
+        parent = loader.load();
+
+        QuantityController q = loader.getController();
+        q.initialize(client, userLabel.getText(), ids);
+
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(parent);
+        stage.setScene(scene);
+        stage.show();
     }
 }
