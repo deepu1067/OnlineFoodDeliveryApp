@@ -13,9 +13,6 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.Socket;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 
 public class QuantityController {
@@ -89,8 +86,17 @@ public class QuantityController {
     }
 
     @FXML
-    void back() throws IOException {
-        System.out.println(price());
+    void back(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../ui/home.fxml"));
+        parent = loader.load();
+
+        HomeController q = loader.getController();
+        q.initialize(userName.getText());
+
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(parent);
+        stage.setScene(scene);
+        stage.show();
     }
 
     private String [] addedFoods(String id) throws IOException{

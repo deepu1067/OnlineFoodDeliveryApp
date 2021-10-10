@@ -1,10 +1,8 @@
 package sample.controllers;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
-
 
 import java.io.*;
 import java.net.Socket;
@@ -37,6 +35,9 @@ public class Checkout {
     public void orderPlaceBtn(javafx.event.ActionEvent actionEvent) {
         String method = paymentMethod.getSelectionModel().getSelectedItem();
         if(method != null){
+            System.out.println(method);
+        }
+        else{
             System.out.println(method);
         }
     }
