@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="bodybg" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.Cart">
-
+   <children>
+      <ImageView fx:id="okSignImg" fitHeight="61.0" fitWidth="49.0" layoutX="276.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Styles/assests/Check%20sign.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="142.0" layoutY="120.0" prefHeight="40.0" prefWidth="317.0" text="Thanks for your order. Your order has been placed." textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Nirmala UI" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="122.0" layoutY="152.0" prefHeight="40.0" prefWidth="357.0" text="Your food will be delivered in 30-40 mins. Enjoy the food!" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Nirmala UI" size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="199.0" layoutY="284.0" prefHeight="79.0" prefWidth="252.0" />
+   </children>
 </AnchorPane>
