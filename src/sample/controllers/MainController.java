@@ -14,9 +14,11 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.Socket;
 import java.util.HashMap;
 
 public class MainController {
+    private Socket client;
     private HashMap<String, String> mapping = new HashMap<>();
     private Parent parent;
     private Scene scene;
@@ -28,8 +30,9 @@ public class MainController {
     Label errorUsername, errorPass;
 
     @FXML
-    void initialize(){
+    void initialize() throws IOException{
         addToMap();
+        client = new Socket("localhost", 6000);
     }
 
     @FXML
@@ -45,31 +48,50 @@ public class MainController {
     void login(ActionEvent event) throws IOException {
         String u = username.getText();
         String p = password.getText();
-
-        if(mapping.containsKey(u)) {
+        if(u.equals("Admin")){
             errorUsername.setText("");
-            String mPass = mapping.get(u);
-            if(mPass.equals(p)) {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("../ui/home.fxml"));
+            if(p.equals("1067")){
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("../ui/adminPanel.fxml"));
                 parent = loader.load();
 
-                HomeController home = loader.getController();
-                home.initialize(u);
+                AdminPanel a = loader.getController();
+                a.initialize(client);
 
                 scene = new Scene(parent);
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 stage.setScene(scene);
                 stage.show();
             }
-            else {
+            else{
                 errorPass.setText("Incorrect Password");
             }
         }
         else{
-            errorUsername.setText("Username not found");
-        }
-    }
+            if(mapping.containsKey(u)) {
+                errorUsername.setText("");
+                String mPass = mapping.get(u);
+                if(mPass.equals(p)) {
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("../ui/home.fxml"));
+                    parent = loader.load();
 
+                    HomeController home = loader.getController();
+                    home.initialize(client, u);
+
+                    scene = new Scene(parent);
+                    stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    stage.setScene(scene);
+                    stage.show();
+                }
+                else {
+                    errorPass.setText("Incorrect Password");
+                }
+            }
+            else{
+                errorUsername.setText("Username not found");
+            }
+        }
+
+    }
     private void addToMap(){
         try{
             FileReader f = new FileReader("src/sample/server/users.txt");

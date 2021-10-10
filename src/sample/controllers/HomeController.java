@@ -48,17 +48,17 @@ public class HomeController {
     @FXML
     TableColumn<Food, String> restaurant;
 
-    ArrayList<Food> listFood = new ArrayList<>();
+
 
     ObservableList<Food> foods = FXCollections.observableArrayList();
     ObservableList<Food> addedItem =  FXCollections.observableArrayList();
 
     @FXML
-    void initialize(String user){
+    void initialize(Socket sc, String user){
         userLabel.setText(user);
         userLabel.setVisible(false);
         try {
-            client = new Socket("localhost", 6000);
+            client = sc;
             OutputStreamWriter o = new OutputStreamWriter(client.getOutputStream());
             BufferedWriter writer = new BufferedWriter(o);
 
@@ -74,7 +74,6 @@ public class HomeController {
                 String[] s = value.split("#");
                 Food f = new Food(s[0], s[1], Boolean.parseBoolean(s[2]), Double.parseDouble(s[3]), s[4]);
                 foods.add(f);
-                listFood.add(f);
             }
         } catch (IOException e) {
             e.printStackTrace();

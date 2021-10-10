@@ -19,12 +19,12 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="address" layoutX="156.0" layoutY="122.0" prefHeight="26.0" prefWidth="443.0" text="Detailed address" textFill="WHITE">
+      <Label fx:id="address" layoutX="156.0" layoutY="120.0" prefHeight="26.0" prefWidth="443.0" text="Detailed address" textFill="WHITE">
          <font>
-            <Font size="16.0" />
+            <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="103.0" layoutY="187.0" text="Payment method" textFill="WHITE">
+      <Label layoutX="103.0" layoutY="191.0" text="Payment method" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -55,7 +55,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <ChoiceBox fx:id="paymentMethod" layoutX="295.0" layoutY="188.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="paymentMethod" layoutX="295.0" layoutY="192.0" prefWidth="150.0" />
       <Label fx:id="userName" layoutX="40.0" layoutY="140.0" />
       <Label fx:id="fileName" layoutX="40.0" layoutY="192.0" />
    </children>

@@ -91,7 +91,7 @@ public class QuantityController {
         parent = loader.load();
 
         HomeController q = loader.getController();
-        q.initialize(userName.getText());
+        q.initialize(client,userName.getText());
 
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(parent);

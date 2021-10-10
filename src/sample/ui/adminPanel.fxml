@@ -6,12 +6,12 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="bodybg" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.Cart">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="bodybg" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.AdminPanel">
    <children>
-      <Label layoutX="230.0" layoutY="7.0" prefHeight="36.0" prefWidth="141.0" text="Admin Panel" textFill="#2c7ed0">
+      <Label layoutX="230.0" layoutY="7.0" prefHeight="36.0" prefWidth="141.0" text="Admin Panel" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
@@ -24,21 +24,22 @@
       <TextField fx:id="name" layoutX="220.0" layoutY="94.0" prefHeight="17.0" prefWidth="165.0" />
       <TextField fx:id="price" layoutX="220.0" layoutY="132.0" prefHeight="25.0" prefWidth="165.0" />
       <TextField fx:id="restaurant" layoutX="220.0" layoutY="169.0" prefHeight="25.0" prefWidth="165.0" />
-      <Button layoutX="442.0" layoutY="101.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="105.0" text="Add item">
+      <Button layoutX="442.0" layoutY="101.0" mnemonicParsing="false" onAction="#add" prefHeight="36.0" prefWidth="105.0" text="Add item">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <TableView layoutX="30.0" layoutY="206.0" prefHeight="139.0" prefWidth="540.0">
+      <Button layoutX="30.0" layoutY="366.0" mnemonicParsing="false" onAction="#deleteItem" prefHeight="25.0" prefWidth="88.0" text="Delete Item" />
+      <Button layoutX="482.0" layoutY="366.0" mnemonicParsing="false" onAction="#home" prefHeight="25.0" prefWidth="88.0" text="Home" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3b8bd1" height="36.0" layoutX="200.0" layoutY="7.0" opacity="0.37" stroke="WHITE" strokeType="INSIDE" width="200.0" />
+      <TableView fx:id="table" layoutX="30.0" layoutY="206.0" prefHeight="148.0" prefWidth="540.0">
         <columns>
-          <TableColumn prefWidth="48.0" text="ID" />
-          <TableColumn prefWidth="156.0" text="Name" />
-            <TableColumn prefWidth="78.0" text="Availability" />
-            <TableColumn prefWidth="79.0" text="Price" />
-            <TableColumn prefWidth="178.0" text="Restaurant" />
+          <TableColumn fx:id="idf" prefWidth="48.0" text="ID" />
+          <TableColumn fx:id="namef" prefWidth="156.0" text="Name" />
+            <TableColumn fx:id="availablef" prefWidth="78.0" text="Availability" />
+            <TableColumn fx:id="pricef" prefWidth="79.0" text="Price" />
+            <TableColumn fx:id="restaurantf" prefWidth="178.0" text="Restaurant" />
         </columns>
       </TableView>
-      <Button layoutX="30.0" layoutY="361.0" mnemonicParsing="false" onAction="#deleteItem" prefHeight="25.0" prefWidth="88.0" text="Delete Item" />
-      <Button layoutX="482.0" layoutY="361.0" mnemonicParsing="false" onAction="#home" prefHeight="25.0" prefWidth="88.0" text="Home" />
    </children>
 </AnchorPane>
