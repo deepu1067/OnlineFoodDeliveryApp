@@ -52,6 +52,16 @@ public class ClientHandler extends Thread{
                     writer.write(getEmail()+"\n");
                     writer.flush();
                 }
+                else if(str.equals("getUserEmail")){
+                    String user = reader.readLine();
+                    writer.write(getUserEmail(user)+"\n");
+                    writer.flush();
+                }
+                else if(str.equals("review")){
+                    String user = reader.readLine();
+                    String review = reader.readLine();
+                    reviews(user, review);
+                }
                 else{
                     System.out.println("[Client] " + str);
                 }
@@ -62,6 +72,42 @@ public class ClientHandler extends Thread{
         }
     }
 
+    private void reviews(String user, String review) throws IOException {
+        FileWriter file;
+        for(int i=1; ;i++){
+            File f = new File("src/sample/server/reviews/"+user+"_"+i+".txt");
+            if(!f.exists()){
+                file = new FileWriter("src/sample/server/reviews/"+user+"_"+i+".txt", true);
+                break;
+            }
+        }
+        BufferedWriter w = new BufferedWriter(file);
+        w.write("User: " + user);
+        w.newLine();
+        w.write("User's review: "+review);
+        w.newLine();
+
+        w.close();
+    }
+    private String getUserEmail(String user) {
+        try{
+            FileReader file = new FileReader("src/sample/server/users.txt");
+            BufferedReader reader = new BufferedReader(file);
+
+            String line;
+            while((line=reader.readLine()) != null){
+                String [] parts = line.split("#");
+                if(parts[3].equals(user)){
+                    return parts[2];
+                }
+            }
+            reader.close();
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return "";
+    }
     private String getEmail(){
         String emails = "";
         try{

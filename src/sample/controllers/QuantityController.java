@@ -139,7 +139,7 @@ public class QuantityController {
 
                 totalPrice += fPrice;
             }
-
+            fileWriter.write("Total Price: "+totalPrice+"\n");
             fileWriter.close();
         }
         catch (IOException e){

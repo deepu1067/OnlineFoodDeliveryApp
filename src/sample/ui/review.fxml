@@ -6,37 +6,47 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="bodybg" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.Review">
    <children>
-      <ImageView fx:id="okSignImg" fitHeight="61.0" fitWidth="49.0" layoutX="276.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="okSignImg" fitHeight="61.0" fitWidth="49.0" layoutX="276.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Styles/assests/Check sign.png" />
          </image>
       </ImageView>
-      <Label layoutX="142.0" layoutY="99.0" prefHeight="40.0" prefWidth="317.0" text="Thanks for your order. Your order has been placed." textAlignment="CENTER" textFill="WHITE">
+      <Label layoutX="142.0" layoutY="69.0" prefHeight="40.0" prefWidth="317.0" text="Thanks for your order. Your order has been placed." textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Nirmala UI" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="122.0" layoutY="131.0" prefHeight="40.0" prefWidth="357.0" text="Your food will be delivered in 30-40 mins. Enjoy the food!" textAlignment="CENTER" textFill="WHITE">
+      <Label layoutX="122.0" layoutY="99.0" prefHeight="40.0" prefWidth="357.0" text="Your food will be delivered in 30-40 mins. Enjoy the food!" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Nirmala UI" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="reviewTf" alignment="TOP_LEFT" layoutX="122.0" layoutY="232.0" prefHeight="95.0" prefWidth="357.0" />
-      <Label layoutX="122.0" layoutY="201.0" text="Leave your precious review here" textFill="WHITE">
+      <TextField fx:id="reviewTf" alignment="TOP_LEFT" layoutX="122.0" layoutY="248.0" prefHeight="95.0" prefWidth="357.0" />
+      <Label layoutX="122.0" layoutY="228.0" text="Leave your precious review here" textFill="WHITE">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Button layoutX="274.0" layoutY="340.0" mnemonicParsing="false" onAction="#submitBtn" text="Submit">
+      <Button layoutX="274.0" layoutY="366.0" mnemonicParsing="false" onAction="#submitBtn" text="Submit">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
       <Label fx:id="userName" layoutX="49.0" layoutY="54.0" />
       <Label fx:id="fileName" layoutX="49.0" layoutY="110.0" />
+      <Button layoutX="448.0" layoutY="158.0" mnemonicParsing="false" onAction="#billing" text="Press Here" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5481a9" height="30.0" layoutX="74.0" layoutY="155.0" opacity="0.51" stroke="BLACK" strokeType="INSIDE" width="370.0" />
+      <Label layoutX="81.0" layoutY="160.0" prefHeight="18.0" prefWidth="358.0" text="If you want to get the billing details to your email press this button" textFill="WHITE" />
+      <Label fx:id="billMsg" layoutX="206.0" layoutY="200.0" text="Your bill has been sent to your email" textFill="WHITE" />
+      <Label fx:id="reviewWarning" layoutX="242.0" layoutY="342.0" text="Please write a review" textFill="#d1ff00">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
