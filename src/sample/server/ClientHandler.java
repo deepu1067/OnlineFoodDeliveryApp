@@ -48,6 +48,10 @@ public class ClientHandler extends Thread{
                     String food = reader.readLine();
                     onDelete(food);
                 }
+                else if(str.equals("getEmails")){
+                    writer.write(getEmail()+"\n");
+                    writer.flush();
+                }
                 else{
                     System.out.println("[Client] " + str);
                 }
@@ -58,6 +62,25 @@ public class ClientHandler extends Thread{
         }
     }
 
+    private String getEmail(){
+        String emails = "";
+        try{
+            FileReader file = new FileReader("src/sample/server/users.txt");
+            BufferedReader reader = new BufferedReader(file);
+
+            String line;
+            while((line=reader.readLine()) != null){
+                String [] parts = line.split("#");
+                String email = parts[2]+",";
+                emails += email;
+            }
+            reader.close();
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return emails;
+    }
     private void onDelete(String food) throws IOException{
         ArrayList<String> list = new ArrayList<>();
 
@@ -86,7 +109,6 @@ public class ClientHandler extends Thread{
         }
         w.close();
     }
-
     private void addNewFood(String food) throws IOException {
         FileWriter fw = new FileWriter("src/sample/server/food.txt", true);
         BufferedWriter w = new BufferedWriter(fw);

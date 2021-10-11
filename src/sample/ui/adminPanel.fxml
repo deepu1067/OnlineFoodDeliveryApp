@@ -11,7 +11,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="bodybg" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.AdminPanel">
    <children>
-      <Label layoutX="230.0" layoutY="7.0" prefHeight="36.0" prefWidth="141.0" text="Admin Panel" textFill="WHITE">
+      <Label layoutX="59.0" layoutY="7.0" prefHeight="36.0" prefWidth="141.0" text="Admin Panel" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
@@ -31,8 +31,8 @@
       </Button>
       <Button layoutX="30.0" layoutY="366.0" mnemonicParsing="false" onAction="#deleteItem" prefHeight="25.0" prefWidth="88.0" text="Delete Item" />
       <Button layoutX="482.0" layoutY="366.0" mnemonicParsing="false" onAction="#home" prefHeight="25.0" prefWidth="88.0" text="Home" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3b8bd1" height="36.0" layoutX="200.0" layoutY="7.0" opacity="0.37" stroke="WHITE" strokeType="INSIDE" width="200.0" />
-      <TableView fx:id="table" layoutX="30.0" layoutY="206.0" prefHeight="148.0" prefWidth="540.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3b8bd1" height="36.0" layoutX="29.0" layoutY="7.0" opacity="0.37" stroke="WHITE" strokeType="INSIDE" width="200.0" />
+      <TableView fx:id="table" layoutX="30.0" layoutY="202.0" prefHeight="148.0" prefWidth="540.0">
         <columns>
           <TableColumn fx:id="idf" prefWidth="48.0" text="ID" />
           <TableColumn fx:id="namef" prefWidth="156.0" text="Name" />
@@ -41,5 +41,16 @@
             <TableColumn fx:id="restaurantf" prefWidth="178.0" text="Restaurant" />
         </columns>
       </TableView>
+      <Label fx:id="emailSent" alignment="CENTER" layoutY="358.0" prefHeight="18.0" prefWidth="600.0" text="The list of the new arrivals has been send to all users" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="shape" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="26.0" layoutX="147.0" layoutY="356.0" opacity="0.26" stroke="BLACK" strokeType="INSIDE" width="307.0" />
+      <Button layoutX="492.0" layoutY="12.0" mnemonicParsing="false" onAction="#notifyUser" text="Notify">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

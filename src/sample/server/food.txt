@@ -1,5 +1,4 @@
 1#Cheese Burger#true#350#K.F.C
-2#Biryani#true#250#Kismot Biryani & Restaurant
 3#Pasta#true#170#Rastaa Pasta
 4#Chicken Burger#true#250#Food court
 5#Kabab#true#190#Kabab Ghor
@@ -8,3 +7,4 @@
 8#Morog polao#true#250#Kismot Biryani & Restaurant
 9#Fried Rice set#true#300#Shopno
 11#Kabab#true#190#Kabab Ghor
+12#Hotdog#true#70#Street
